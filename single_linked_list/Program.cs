@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace single_linked_list
 {
@@ -91,6 +92,20 @@ namespace single_linked_list
                 return (false);
             else
                 return (true);
+        }
+        /*Method untuk Traverse/mengunjungi dan membaca isi list*/
+        public void treverse()
+        {
+            if (listEmpty())
+                Console.WriteLine("\nList kosong : \n");
+            else
+            {
+                Console.WriteLine("\nData didalam list adalah : \n");
+                Node currentNode;
+                for (currentNode = START; currentNode != null; currentNode = currentNode.next)
+                    Console.Write(currentNode.noMhs + " " + currentNode.nama + "\n");
+                Console.WriteLine();
+            }
         }
     }
     
